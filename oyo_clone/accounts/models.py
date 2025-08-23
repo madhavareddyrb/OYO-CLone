@@ -7,12 +7,14 @@ class HotelUser(User):
   phone_number = models.CharField(unique = True, max_length = 12)
   email_token = models.EmailField(null = True, blank = True, unique=True)
   otp = models.CharField( max_length = 10,null = True, blank = True)
+  is_verified = models.BooleanField(default = False)
 
 class HotelVendor(User):
   profile_pic = models.ImageField(upload_to = 'profiles/vendors')
   phone_number = models.CharField(max_length = 12, unique= True)
   email_token = models.EmailField(max_length=100, null= True, blank = True)
   otp = models.CharField(max_length=100,null= True, blank = True)
+  is_verified = models.BooleanField(default = False)
 
 class Ameneties(models.Model):
   name = models.CharField(max_length= 1000)
