@@ -11,8 +11,7 @@
   <body>
 
     {% include "utils/navbar.html" %}
-
-
+    
     {% block start %}
     
     {% endblock  %}
@@ -20,6 +19,7 @@
 
     <div class="bg-dark p-5 mt-5">
     <p class="text-center text-white">All Right reserved 2024. OYO CLONE</p>
+    <a href="{% url 'login_vendor' %}">Login Vendor</a> |  <a href="{% url 'register_vendor'%}">Register Vendor</a></p>
    </div>
 
 
